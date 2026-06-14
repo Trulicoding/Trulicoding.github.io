@@ -1,0 +1,52 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100vh;
+    padding: 4rem;
+}
+
+nav a.active {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+.glow-card {
+    position: relative;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 16px;
+    background:
+        radial-gradient(
+            300px circle at var(--x, 50%) var(--y, 50%),
+            rgba(0, 200, 255, 0.35),
+            transparent 60%
+        ),
+        #111;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+}
+/*
+.glow-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+
+    background: radial-gradient(
+        circle at var(--x, 50%) var(--y, 50%),
+        rgba(255, 255, 255, 1),
+        transparent 40%
+    );
+
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
+
+    pointer-events: none;
+}
+*/
