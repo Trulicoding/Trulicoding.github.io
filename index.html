@@ -1,12 +1,3 @@
-<!--
-TODO:
-- GitHub repositories demonstrating your code ~Give Context
-- LinkedIn profile (recommended)
-- Downloadable Resume (recommended)
-- Projects, coursework, achievements
-- Not graded on design ~the goal is professional readiness
-- Name, Education, City, 
--->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -17,32 +8,166 @@ TODO:
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./projects/index.html">Projects</a></li>
-                    <li><a href="./contact/index.html">Contact</a></li>
-                </ul>
+        <header class="site-header">
+            <nav class="navbar">
+                <div class="nav-left">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="nav-right">
+                    <a class="icon-link" href="Dallen_Sandstrom_Resume.pdf" download title="Download resume">
+                        <span class="icon">📄</span>
+                        <span>Download Resume</span>
+                    </a>
+
+                    <a class="icon-link" href="https://github.com/Trulicoding" target="_blank" rel="noopener noreferrer" title="https://github.com/Trulicoding">
+                        <span class="icon">💻</span>
+                        <span>GitHub</span>
+                    </a>
+
+                    <a class="icon-link" href="http://www.linkedin.com/in/dallen-sandstrom-635285252" target="_blank" rel="noopener noreferrer" title="http://www.linkedin.com/in/dallen-sandstrom-635285252">
+                        <span class="icon">🔗</span>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
             </nav>
         </header>
-        <main>
-            <div class="card glow-card">
-                <h2>Project Card</h2>
-                <p>This card reacts to the cursor.</p>
-            </div>
-            <div class="banner_image">
+        <main class="page-shell">
+            <section class="banner-layer"></section>
 
-            </div>
-            <div class="introduction">
-                <div class="introduciton_text">
-
-                </div>
-                <div class="introduction_image">
-
-                </div>
+            <div class="hero-title">
+                <h1>Dallen Sandstrom</h1>
+                <p>Software Development & Cybersecurity</p>
             </div>
 
+            <div class="document-page">
+                <section id="about" class="info-card">
+                    <h1>About Me</h1>
+                    <p>Hello you, the type of person who's ended up reading a website some computer nerd made for himself. A site like this does not exactly attract a broad demographic, you should be proud of yourself.</p>
+                    <p>I'm Dallen Sandstrom, I'm from Utah and in my first year of High School I learned I really enjoyed programming. Specifically because I liked being able to look at a screen nonsensical text and be able to understand it completely. That same year I was introduced to Arch Linux by a friend because my computer wouldn't open any web browsers other than Microsoft Edge (years later I would learn that this was caused by a corruption in my Microsoft account).</p>
+                    <p>I graduated high school with an early college Associate of Applied Science and I had learned that Cybersecurity was another interest of mine, so over that summer I would get the CompTIA Security+ Certification. Now I'm fresh out of Weber State University with a Bachelors of Computer Science with a Minor in Cybersecurity and Networking and would like to further my interests and skillset in a professional capacity.</p>
+                </section>
+
+                <section id="skills" class="info-card">
+                    <h1>Skills</h1>
+                    <div class="skills-grid">
+                        <div>
+                            <h3>Strongest Languages</h3>
+                            <ul>
+                                <li>C++</li>
+                                <li>C#</li>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>HTML/CSS</li>
+                                <li>SQL</li>
+                                <li>Bash</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Linux & Systems</h3>
+                            <ul>
+                                <li>Linux Console</li>
+                                <li>Open Source Tooling</li>
+                                <li>Automation Scripting</li>
+                                <li>Dual Booting</li>
+                                <li>Virtual Machines</li>
+                                <li>Live Environments</li>
+                                <li>System Troubleshooting</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Security</h3>
+                            <ul>
+                                <li>Web Application Authentication & Authorization</li>
+                                <li>Windows NTFS Permissions</li>
+                                <li>Deleted File Recovery</li>
+                                <li>Secure Drive Wiping</li>
+                                <li>Removal and Destruction of RAM and Hard Drives</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+                <section id="projects" class="info-card">
+                    <h1>Project Highlights</h1>
+
+                    <div class="project">
+                        <h3>
+                            <a href="https://github.com/TheWebRage/ReduSharptor" target="_blank" rel="noopener noreferrer">
+                                ReduSharptor Faculty Directed Research
+                            </a>
+                        </h3>
+                        <p>
+                            Summer 2026 semester working on improving the ReduSharptor project, a C# test code reduction tool, to utilize Hierarchical Delta Debugging as part of a Faculty Directed Research program at Weber State University.
+                        </p>
+                    </div>
+
+                    <div class="project">
+                        <h3>
+                            <a href="https://github.com/dallensandstrom/TrellYeahCS4760" target="_blank" rel="noopener noreferrer">
+                                ASP.NET Core Web Application Capstone
+                            </a>
+                        </h3>
+                        <p>
+                            Summer 2026 CS 4750 Capstone project where, with me taking on the role of team lead for a group of three other students, we developed a full stack ASP.Net Core web application for the mock project of creating a grant application and management system for Weber State University.
+                        </p>
+                    </div>
+
+                    <div class="project">
+                        <h3>
+                            <a href="https://github.com/Trulicoding/TTRPGdiceRollerPublic" target="_blank" rel="noopener noreferrer">
+                                TTRPG Dice Roller
+                            </a>
+                        </h3>
+                        <p>
+                            My largest and most complex programming project I've done, created entirely in my own time and for my own benefit. A C++ application for advanced dice expressions for tabletop role playing games, made to emulate a calculator.
+                        </p>
+                    </div>
+
+                    <div class="project">
+                        <h3>
+                            <a href="https://github.com/CarstenScholle/CS3280GroupProject" target="_blank" rel="noopener noreferrer">
+                                WPF Application
+                            </a>
+                        </h3>
+                        <p>
+                            A WPF application for Fall 2024 semester CS 3280 class. A group project where we each focused on a specific page of a mock invoice system. I handled the Search Page.
+                        </p>
+                    </div>
+
+                    <div class="project">
+                        <h3>
+                            <a href="https://github.com/Trulicoding/Dallen_Sandstroms_Programming_Portfolio/tree/main/Programming_Portfolio/Homelab_Projects/discord_vc_bot" target="_blank" rel="noopener noreferrer">
+                                Discord Bot
+                            </a>
+                        </h3>
+                        <p>
+                            A Python Discord bot made to surprise my friends one game night. It changes the bots profile picture and nickname, enters the same voice channel as a specified user, plays an audio file on repeat, and can relay messages into a vc-text channel.
+                        </p>
+                    </div>
+
+                    <div class="project">
+                        <h3>
+                            <a href="https://github.com/Trulicoding/Dallen_Sandstroms_Programming_Portfolio/tree/main/Programming_Portfolio/Homelab_Projects/GdriveAutoBackup" target="_blank" rel="noopener noreferrer">
+                                Backup Script
+                            </a>
+                        </h3>
+                        <p>
+                            Automated backup script for backing up specified directories to a Google Drive account.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="contact" class="info-card">
+                    <h2>Contact</h2>
+                    <div><strong>Location:</strong> Syracuse, Utah</div>
+                    <div><strong>Email:</strong> dallen.sandstrom@gmail.com</div>
+                    <div ><strong>LinkedIn:</strong> <a href="http://www.linkedin.com/in/dallen-sandstrom-635285252" target="_blank" rel="noopener noreferrer" class="profile-link">Profile </a></div>
+                </section>
+            </div>
         </main>
         <footer>
 

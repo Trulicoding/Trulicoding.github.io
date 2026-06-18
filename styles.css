@@ -2,51 +2,166 @@ html {
     scroll-behavior: smooth;
 }
 
-section {
-    min-height: 100vh;
-    padding: 4rem;
+body {
+    margin: 0;
+    background: #111;
 }
+
+
+/*Header section*/
+
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #111;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: clamp(0.4rem, 1.5vw, 0.75rem) clamp(0.75rem, 4vw, 2rem);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(0.75rem, 1.5vw, 1.05rem);
+}
+
+.icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(0.6rem, 1.2vw, 0.85rem);
+}
+
+.icon {
+    font-size: clamp(1rem, 2.5vw, 1.7rem);
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
 
 nav a.active {
     color: white;
     border-bottom: 2px solid white;
 }
+/*End header section*/
 
-.glow-card {
-    position: relative;
+/*Background and content section*/
+
+.info-card {
+    margin: 1rem 0;
     padding: 2rem;
-    margin: 2rem;
-    border-radius: 16px;
-    background:
-        radial-gradient(
-            300px circle at var(--x, 50%) var(--y, 50%),
-            rgba(0, 200, 255, 0.35),
-            transparent 60%
-        ),
-        #111;
+    border-radius: 18px;
+    background: rgba(17, 17, 17, 0.82);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
 }
-/*
-.glow-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
 
-    background: radial-gradient(
-        circle at var(--x, 50%) var(--y, 50%),
-        rgba(255, 255, 255, 1),
-        transparent 40%
-    );
-
-    mask:
-        linear-gradient(#000 0 0) content-box,
-        linear-gradient(#000 0 0);
-    mask-composite: exclude;
-
-    pointer-events: none;
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5rem;
 }
-*/
+
+.page-shell {
+    position: relative;
+    min-height: 160vh;
+}
+
+.banner-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("images/banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    padding-left: 20vw;
+    padding-top: 40vh;
+}
+
+.document-page {
+    position: relative;
+    z-index: 2;
+    max-width: 950px;
+    margin: 40vh auto 5vh;
+    padding: 1rem;
+    background: rgba(24, 28, 34, 0.92);
+    color: #f4f4f4;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: 0 -12px 60px rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+}
+
+/*End background and content section*/
+
+/*Title Section*/
+.hero-title {
+    position: relative;
+    margin-top: 180px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 20px #000, 0 0 40px #000, 0 0 80px #000;
+}
+
+    .hero-title h1 {
+        margin: 0;
+        font-size: 4rem;
+        letter-spacing: 0.08em;
+    }
+
+    .hero-title p {
+        margin-top: 1rem;
+        font-size: 1.35rem;
+    }
+/*End Title Section*/
+
+/*Links*/
+.project {
+    margin-bottom: 2rem;
+}
+
+    .project h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    .project a {
+        color: #7ec8ff;
+        text-decoration: none;
+        text-decoration: underline;
+    }
+
+    .project p {
+        margin-top: 0;
+        opacity: 0.9;
+    }
+
+.profile-link {
+    color: #7ec8ff;
+    text-decoration: none;
+    text-decoration: underline;
+}
+/*End Links*/
