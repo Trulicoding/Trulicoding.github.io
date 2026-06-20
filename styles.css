@@ -105,7 +105,7 @@ nav a.active {
 .document-page {
     position: relative;
     z-index: 2;
-    max-width: 950px;
+    max-width: 850px;
     margin: 40vh auto 5vh;
     padding: 1rem;
     background: rgba(24, 28, 34, 0.92);
