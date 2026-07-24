@@ -1,20 +1,30 @@
-const sections = document.querySelectorAll("#about, #skills, #projects, #contact");
+const sections = document.querySelectorAll(
+    "#about, #skills, #projects, #contact"
+);
 
 const navLinks = document.querySelectorAll(".nav-left a");
 
-window.addEventListener("scroll", () => {
+function updateActiveNavigation() {
     let current = "";
 
-    sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
+    const reachedBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 5;
 
-        if (rect.top <= 180) {
-            current = section.id;
-        }
-    });
+    if (reachedBottom) {
+        current = "contact";
+    } else {
+        sections.forEach(section => {
+            const sectionPosition = section.getBoundingClientRect();
+
+            if (sectionPosition.top <= 180) {
+                current = section.id;
+            }
+        });
+    }
 
     navLinks.forEach(link => {
-        link.classList.toggle("active", link.getAttribute("href") === `#${current}`
-        );
+        link.classList.toggle("active", link.getAttribute("href") === `#${current}`);
     });
-});
+}
+
+window.addEventListener("scroll", updateActiveNavigation);
+window.addEventListener("load", updateActiveNavigation);
